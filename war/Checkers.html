@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="Checkers.css">
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>Checkers</title>
+    
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" language="javascript" src="checkers/checkers.nocache.js"></script>
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body>
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+    
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+    <h1>Checkers</h1>
+	
+	<table>
+	<tr>
+		<td>
+			<table border="1" style="width:100%">
+		  		<tr>
+		    		<th style="font-weight:bold;color:green">Player Wins</th>
+		    		<th style="font-weight:bold;color:red">Computer Wins</th>
+		    		<th style="font-weight:bold;color:blue">Ties</th>
+		  		</tr>
+		  		<tr>
+		  			<td id="playerWinsAmount" width="33%" align="center"></td>
+		     		<td id="computerWinsAmount" width="33%" align="center"></td>   
+		     		<td id="tieWinsAmount" width="33%" align="center"></td> 
+		  		</tr>
+			</table>
+			<br>
+			<br>
+			<table border="1">
+		  		<tr>
+		    		<th style="font-weight:bold;color:green"># of Player Pieces</th>
+		    		<th style="font-weight:bold;color:red"># of Computer Pieces</th>
+		  		</tr>
+		  		<tr>
+		  			<td id="playerPiecesAmount" width="50%" align="center"></td>
+		     		<td id="computerPiecesAmount" width="50%" align="center"></td>
+		  		</tr>
+			</table>
+			<br>
+			<button type="button" id="newGameButton" style="width:100%;">New Game</button>
+			<br>
+			<br>
+			<button type="button" id="resetButton" style="width:100%;">Reset Scores (New Game)</button>
+			<br>
+			<br>
+			<button type="button" id="undoButton" style="width:100%;">Undo Last Player Move</button>
+		</td>
+		<td>
+			<div id="board" align="center"></div>
+		</td>
+	<tr>
+	</table>
+
+ </body>
+</html>
